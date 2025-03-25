@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر آبل ستور - النسخة العربية</title>
+    <meta name="description" content="متجر إلكتروني متكامل مشابه لـ Apple Store بواجهة عربية كاملة">
+    <!-- Favicon -->
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- RTL Support -->
+    <link rel="stylesheet" href="./css/rtl.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./images/logo.png" alt="متجر آبل ستور">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="categories.html">الفئات</a></li>
+                        <li><a href="products.html">المنتجات</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="user-account">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="shopping-cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>متجر. أفضل طريقة لشراء المنتجات التي تحبها.</h1>
+                <p>تسوق أحدث منتجات آبل واكتشف الملحقات الرائعة والعروض الخاصة.</p>
+                <a href="products.html" class="btn btn-primary">تسوق الآن</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="product-categories">
+        <div class="container">
+            <h2 class="section-title">تصفح حسب الفئة</h2>
+            <div class="categories-grid">
+                <div class="category-item">
+                    <img src="./images/category-iphone.jpg" alt="آيفون">
+                    <h3>آيفون</h3>
+                </div>
+                <div class="category-item">
+                    <img src="./images/category-mac.jpg" alt="ماك">
+                    <h3>ماك</h3>
+                </div>
+                <div class="category-item">
+                    <img src="./images/category-ipad.jpg" alt="آيباد">
+                    <h3>آيباد</h3>
+                </div>
+                <div class="category-item">
+                    <img src="./images/category-watch.jpg" alt="ساعة آبل">
+                    <h3>ساعة آبل</h3>
+                </div>
+                <div class="category-item">
+                    <img src="./images/category-airpods.jpg" alt="إيربودز">
+                    <h3>إيربودز</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">المنتجات المميزة</h2>
+            <div class="products-grid">
+                <!-- Product items will be dynamically loaded from Firebase -->
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="./images/product-iphone.jpg" alt="آيفون 15 برو">
+                    </div>
+                    <div class="product-info">
+                        <h3>آيفون 15 برو</h3>
+                        <p class="product-price">4999 ريال</p>
+                        <button class="btn btn-secondary add-to-cart">أضف إلى السلة</button>
+                    </div>
+                </div>
+                <!-- More products... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner -->
+    <section class="promo-banner">
+        <div class="container">
+            <div class="banner-content">
+                <h2>تقسيط بدون فوائد</h2>
+                <p>احصل على أحدث منتجات آبل بالتقسيط على 12 شهر بدون فوائد</p>
+                <a href="#" class="btn btn-outline">اكتشف المزيد</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-item">
+                    <i class="fas fa-truck"></i>
+                    <h3>شحن مجاني</h3>
+                    <p>للطلبات فوق 500 ريال</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>ضمان أصلي</h3>
+                    <p>منتجات أصلية 100%</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-headset"></i>
+                    <h3>دعم فني</h3>
+                    <p>متوفر على مدار الساعة</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-undo"></i>
+                    <h3>استرجاع مجاني</h3>
+                    <p>خلال 14 يوم من الشراء</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>اشترك في نشرتنا الإخبارية</h2>
+                <p>احصل على آخر العروض والتحديثات مباشرة إلى بريدك الإلكتروني</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                    <button type="submit" class="btn btn-primary">اشترك</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <h3>تسوق وتعلم</h3>
+                    <ul>
+                        <li><a href="#">متجر</a></li>
+                        <li><a href="#">ماك</a></li>
+                        <li><a href="#">آيباد</a></li>
+                        <li><a href="#">آيفون</a></li>
+                        <li><a href="#">ساعة</a></li>
+                        <li><a href="#">إيربودز</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>خدمات المتجر</h3>
+                    <ul>
+                        <li><a href="#">حسابي</a></li>
+                        <li><a href="#">طلباتي</a></li>
+                        <li><a href="#">الدفع</a></li>
+                        <li><a href="#">الشحن والتسليم</a></li>
+                        <li><a href="#">سياسة الاسترجاع</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>عن الشركة</h3>
+                    <ul>
+                        <li><a href="#">من نحن</a></li>
+                        <li><a href="#">المسؤولية الاجتماعية</a></li>
+                        <li><a href="#">الوظائف</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>تواصل معنا</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p>البريد الإلكتروني: support@applestore.com</p>
+                    <p>رقم الهاتف: 920000000</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 متجر آبل ستور. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="payment-methods">
+                    <img src="./images/payment-methods.png" alt="طرق الدفع">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase Config -->
+    <script src="./js/firebase-config.js"></script>
+    <!-- Main JavaScript -->
+    <script src="./js/main.js"></script>
+</body>
+</html>

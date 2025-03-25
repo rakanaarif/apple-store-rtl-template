@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آيفون 15 برو - متجر آبل ستور العربي</title>
+    <meta name="description" content="اكتشف آيفون 15 برو الجديد كلياً مع شريحة A17 Pro وكاميرا احترافية بدقة 48 ميجابكسل ونظام iOS 17.">
+    <!-- Favicon -->
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- RTL Support -->
+    <link rel="stylesheet" href="./css/rtl.css">
+    <!-- Product CSS -->
+    <link rel="stylesheet" href="./css/product.css">
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-storage.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./images/logo.png" alt="متجر آبل ستور">
+                    </a>
+                </div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="categories.html">الفئات</a></li>
+                        <li><a href="products.html">المنتجات</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="user-account">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="shopping-cart">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="categories.html">الفئات</a></li>
+                <li><a href="category-iphone.html">آيفون</a></li>
+                <li>آيفون 15 برو</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-grid">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img src="./images/iphone15pro-main.jpg" alt="آيفون 15 برو" id="mainImage">
+                    </div>
+                    <div class="thumbnails">
+                        <div class="thumb active" data-src="./images/iphone15pro-main.jpg">
+                            <img src="./images/iphone15pro-thumb1.jpg" alt="آيفون 15 برو - الواجهة">
+                        </div>
+                        <div class="thumb" data-src="./images/iphone15pro-side.jpg">
+                            <img src="./images/iphone15pro-thumb2.jpg" alt="آيفون 15 برو - الجانب">
+                        </div>
+                        <div class="thumb" data-src="./images/iphone15pro-back.jpg">
+                            <img src="./images/iphone15pro-thumb3.jpg" alt="آيفون 15 برو - الخلف">
+                        </div>
+                        <div class="thumb" data-src="./images/iphone15pro-camera.jpg">
+                            <img src="./images/iphone15pro-thumb4.jpg" alt="آيفون 15 برو - الكاميرا">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <h1>آيفون 15 برو</h1>
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(150 تقييم)</span>
+                        </div>
+                        <div class="product-id">
+                            <span>رمز المنتج: IP15PRO-128</span>
+                        </div>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">4999 ريال</span>
+                        <span class="old-price">5499 ريال</span>
+                        <span class="discount">-9%</span>
+                    </div>
+                    <div class="product-description">
+                        <p>آيفون 15 برو الجديد كلياً مع شريحة A17 Pro وكاميرا احترافية بدقة 48 ميجابكسل ونظام iOS 17. يأتي بتصميم التيتانيوم الفاخر مع شاشة Super Retina XDR بحجم 6.1 بوصة وتقنية ProMotion وميزة العرض الدائم.</p>
+                    </div>
+
+                    <!-- Añadir sección de pestañas de información del producto -->
+                    <div class="product-tabs">
+                        <ul class="tabs">
+                            <li class="tab active" data-tab="description">الوصف</li>
+                            <li class="tab" data-tab="specifications">المواصفات</li>
+                            <li class="tab" data-tab="reviews">التقييمات</li>
+                        </ul>
+                        <div class="tab-content" id="description">
+                            <p>تفاصيل المنتج...</p>
+                        </div>
+                        <div class="tab-content" id="specifications" style="display:none;">
+                            <p>المواصفات الفنية...</p>
+                        </div>
+                        <div class="tab-content" id="reviews" style="display:none;">
+                            <p>تقييمات العملاء...</p>
+                        </div>
+                    </div>
+                    <script>
+                        document.querySelectorAll('.tab').forEach(tab => {
+                            tab.addEventListener('click', () => {
+                                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                                document.querySelectorAll('.tab-content').forEach(content => content.style.display = 'none');
+                                tab.classList.add('active');
+                                document.getElementById(tab.dataset.tab).style.display = 'block';
+                            });
+                        });
+                    </script>
+
+                    <div class="product-variants">
+                        <div class="variant-type">
+                            <h3>اللون:</h3>
+                            <div class="color-options">
+                                <div class="color-option active" data-color="titanium-natural" style="background-color: #E3D0C0;">
+                                    <span>تيتانيوم طبيعي</span>
+                                </div>
+                                <div class="color-option" data-color="titanium-blue" style="background-color: #505F75;">
+                                    <span>تيتانيوم أزرق</span>
+                                </div>
+                                <div class="color-option" data-color="titanium-white" style="background-color: #F5F5F0;">
+                                    <span>تيتانيوم أبيض</span>
+                                </div>
+                                <div class="color-option" data-color="titanium-black" style="background-color: #3D3D3D;">
+                                    <span>تيتانيوم أسود</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="variant-type">
+                            <h3>السعة:</h3>
+                            <div class="capacity-options">
+                                <div class="capacity-option active" data-capacity="128">
+                                    <span>128 جيجابايت</span>
+                                </div>
+                                <div class="capacity-option" data-capacity="256">
+                                    <span>256 جيجابايت</span>
+                                    <span class="capacity-price">+500 ريال</span>
+                                </div>
+                                <div class="capacity-option" data-capacity="512">
+                                    <span>512 جيجابايت</span>
+                                    <span class="capacity-price">+1000 ريال</span>
+                                </div>
+                                <div class="capacity-option" data-capacity="1TB">
+                                    <span>1 تيرابايت</span>
+                                    <span class="capacity-price">+1500 ريال</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn decrease">-</button>
+                            <input type="number" value="1" min="1" max="10" id="quantity">
+                            <button class="quantity-btn increase">+</button>
+                        </div>
+                        <button class="btn btn-primary add-to-cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            أضف إلى السلة
+                        </button>
+                        <button class="btn btn-outline wishlist-btn">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-availability">
+                        <i class="fas fa-check-circle"></i>
+                        <span>متوفر في المخزون - يشحن خلال 24 ساعة</span>
+                    </div>
+                    <div class="product-shipping">
+                        <div class="shipping-option">
+                            <i class="fas fa-truck"></i>
+                            <span>شحن مجاني للطلبات فوق 500 ريال</span>
+                        </div>
+                        <div class="shipping-option">
+                            <i class="fas fa-undo"></i>
+                            <span>استرجاع مجاني خلال 14 يوم</span>
+                        </div>
+                        <div class="shipping-option">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>ضمان أصلي لمدة سنة</span>
+                        </div>
+                    </div>
+                    <div class="product-payment">
+                        <h3>طرق الدفع:</h3>
+                        <div class="payment-methods">
+                            <img src="./images/payment-mada.png" alt="مدى">
+                            <img src="./images/payment-visa.png" alt="فيزا">
+                            <img src="./images/payment-mastercard.png" alt="ماستركارد">
+                            <img src="./images/payment-applepay.png" alt="أبل باي">
+                        </div>
+                    </div>
+                    <div class="product-share">
+                        <h3>مشاركة:</h3>
+                        <div class="social-share">
+                            <a href="#" class="share-btn facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="share-btn twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="share-btn whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="share-btn telegram">
+                                <i class="fab fa-telegram-plane"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
