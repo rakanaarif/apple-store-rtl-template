@@ -1,0 +1,124 @@
+/* ==========================================
+   NOTIFICATION STYLES
+========================================== */
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: var(--border-radius-md);
+    background-color: white;
+    box-shadow: var(--shadow-lg);
+    transform: translateX(120%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    max-width: 350px;
+}
+
+.notification.show {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.notification i {
+    margin-left: 15px;
+    font-size: 1.25rem;
+}
+
+.notification span {
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.close-notification {
+    background: none;
+    border: none;
+    color: var(--accent-color);
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 5px;
+    font-size: 1rem;
+    transition: color var(--transition-fast) ease;
+}
+
+.close-notification:hover {
+    color: var(--dark-color);
+}
+
+/* Notification Types */
+.notification.success {
+    border-right: 4px solid #28a745;
+}
+
+.notification.success i {
+    color: #28a745;
+}
+
+.notification.error {
+    border-right: 4px solid #dc3545;
+}
+
+.notification.error i {
+    color: #dc3545;
+}
+
+.notification.warning {
+    border-right: 4px solid #ffc107;
+}
+
+.notification.warning i {
+    color: #ffc107;
+}
+
+.notification.info {
+    border-right: 4px solid #17a2b8;
+}
+
+.notification.info i {
+    color: #17a2b8;
+}
+
+/* RTL Specific Adjustments */
+html[dir="rtl"] .notification {
+    right: auto;
+    left: 20px;
+    transform: translateX(-120%);
+}
+
+html[dir="rtl"] .notification.show {
+    transform: translateX(0);
+}
+
+html[dir="rtl"] .notification {
+    border-right: none;
+}
+
+html[dir="rtl"] .notification.success {
+    border-left: 4px solid #28a745;
+}
+
+html[dir="rtl"] .notification.error {
+    border-left: 4px solid #dc3545;
+}
+
+html[dir="rtl"] .notification.warning {
+    border-left: 4px solid #ffc107;
+}
+
+html[dir="rtl"] .notification.info {
+    border-left: 4px solid #17a2b8;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 576px) {
+    .notification {
+        width: calc(100% - 40px);
+        max-width: none;
+        bottom: 20px;
+        top: auto;
+    }
+}
